@@ -16,7 +16,7 @@ func loadFile(file string) *Docx {
 		panic(err)
 	}
 
-	return r.Editable()
+	return r.NewReplaceDocx()
 }
 
 func loadFromMemory(file string) *Docx {
@@ -26,7 +26,7 @@ func loadFromMemory(file string) *Docx {
 		panic(err)
 	}
 
-	return r.Editable()
+	return r.NewReplaceDocx()
 }
 
 //Tests that we are able to load a file from a memory array of bytes and do a quick replacement test
